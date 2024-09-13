@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+  <STYLE>
+    .NOTE {
+      color: rgb(8, 8, 8);
+      font-size: large;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .H5 {
+      color: rgb(13, 0, 250);
+      font-weight: 600;
+      font-weight: bold;
+      font-size: xx-large;
+    }
+
+    .SLIDE2 {
+      color: rgba(246, 18, 18, 0.935);
+      font-size: large;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .SLIDES2 {
+      color: rgba(234, 232, 239, 0.994);
+      font-weight: bold;
+      font-style: italic;
+      font-size: large;
+
+    }
+
+    .SLIDE3 {
+      color: rgba(78, 162, 246, 0.959);
+      font-style: italic;
+      font-weight: bold;
+
+    }
+
+    .SLIDES3 {
+      color: rgb(250, 245, 245);
+      font-weight: bold;
+      font-style: italic;
+      font-size: Large;
+
+    }
+
+    .src1 {
+      display: flex;
+      object-fit: cover;
+      background-size: contain;
+      padding: auto;
+      margin: auto;
+      height: 700px;
+      width: 1500px;
+    }
+
+    .src2 {
+      padding: auto;
+      margin: auto;
+      height: 700px;
+      width: 1500px;
+    }
+
+    .src3 {
+      padding: auto;
+      margin: auto;
+      height: 700px;
+      width: 1500px;
+    }
+
+    .ROW {
+      margin-top: 10rem;
+      padding-left: 2rem;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: block;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .site-footer {
+      background-color: #26272b;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #737373;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5;
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0;
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px;
+    }
+
+    .site-footer a {
+      color: #737373;
+    }
+
+    .site-footer a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .footer-links li {
+      display: block;
+    }
+
+    .footer-links a {
+      color: #737373;
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .site-footer .social-icons {
+      text-align: right;
+    }
+
+    .site-footer .social-icons a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: #33353d;
+    }
+
+    .copyright-text {
+      margin: 0;
+    }
+
+    @media (max-width: 991px) {
+      .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .site-footer {
+        padding-bottom: 0;
+      }
+
+      .site-footer .copyright-text,
+      .site-footer .social-icons {
+        text-align: center;
+      }
+    }
+
+    .social-icons {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .social-icons a {
+      background-color: #eceeef;
+      color: #818a91;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-right: 8px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+    }
+
+    .logo {
+      color: #eb6857;
+    }
+
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+      color: #fff;
+      background-color: #29aafe;
+    }
+
+    .social-icons a.facebook:hover {
+      background-color: #3b5998;
+    }
+
+    .social-icons a.twitter:hover {
+      background-color: #00aced;
+    }
+
+    .social-icons a.linkedin:hover {
+      background-color: #007bb6;
+    }
+
+    .social-icons a.dribbble:hover {
+      background-color: #ea4c89;
+    }
+
+  </STYLE>
+  <title>BOUNDLE BABA</title>
+  </STYLE>
+
+</head>
+
+<body>
+
+
+  <!-- MAIN NAVBAR -->
+<HR>
+<div class="container ">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="about.html"> ENGG.BOUNDLE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+
+<!-- HOME BUTTOM -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="LOGO.HTML" role="button"
+              aria-expanded="false">HOME</a>
+            <ul class="dropdown-menu">
+                <h class="dropdown-divider">
+               </li>
+              <li>
+                <div class="alert alert-primary" role="alert">
+                <a href="LOGO.HTML" class="alert-link"> UNIQUE USER</a>
+                </div>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li> 
+               <li><div class="alert alert-primary" role="alert">
+                <a href="LOGIN PAGE.HTML" class="alert-link">SIGN UP</a>
+                </div></li>
+            </ul>
+          </li>
+
+
+<!-- BRANCH CHOISE -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">BRANCH</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="CSE.HTML">CSE-CORE</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="CS-IT.HTML">CS-IT</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="ELEC.HTML">ELECTRICAL ENGG.</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="ELC.HTML">ELECTRONIC ENGG.</a></li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="MECH.HTML">MECHANICAL ENGG.</a></li>
+            <hr class="dropdown-divider">
+            <li>
+            </li>
+            <li><a class="dropdown-item" href="CVI.HTML">CIVIL ENGG.</a></li>
+            <hr class="dropdown-divider">
+            <li>
+              <li><a class="dropdown-item" href="BI0-TECH.HTML">BIO-TECH ENGG.</a></li>
+            </ul>
+          </li>
+
+
+
+<!-- ANNOUNCEMENT -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="https://aktu.ac.in/" role="button"
+              aria-expanded="false">ANNOUNCEMENT</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://aktu.ac.in/syllabus.html">SYLLABUS</a></li>
+              <li><a class="dropdown-item" href="https://erp.aktu.ac.in/Login.aspx?AspxAutoDetectCookieSupport=1">ERP AKTU </a></li>
+              <li><a class="dropdown-item" href="https://aktu.ac.in/examination%20schedule.html">SCHEDULE</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="https://aktu.ac.in/circulars.html">CIRCULAR</a></li>
+              <!-- <li><a class="dropdown-item" href="https://aktu.ac.in/examination%20schedule.html"></a>SHEDUAL</li> -->
+            </ul>
+          </li>
+
+
+<!-- QUERIES TAB -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">QUERIES</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://chatgpt.com/">AI CHATBOX</a></li>
+            </ul>
+          </li>
+
+<!-- BANK OPTION -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              BANK
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="1ST SEM.HTML">1ST YEAR BUNDLE</a></li>
+              <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1TpPrbIg_gquFOukENwiUoI7ACp7e5UuC?usp=drive_link">1ST YEAR BUNDLE-2</a></li>
+              <li><a class="dropdown-item" href="https://eceweber65.wixsite.com/engineeringhelper/file-links">OTHER PLATFORM</a></li>
+              <li><a class="dropdown-item" href="https://theycotes.com/logpage.php">OTHER PLATFORM 2</a></li>
+              <!-- <li><a class="dropdown-item" href="CHOISE.HTML">PRACTICLE FILE</a></li>
+              <li><a class="dropdown-item" href="CHOISE.HTML">BOOKS</a></li> -->
+              <hr class="dropdown-divider">
+              <li><a class="dropdown-item" href="https://chat.whatsapp.com/Hazbe7JQJFT1zoi0f0DgW3">JOIN GROUP</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="https://aktu.ac.in/"> OFFICIAL AKTU</a></li>
+            </ul>
+          </li>
+
+  <!-- PAGE.ABOUT -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT.US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">TEAM</a>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <HR>
+
+<!-- SLIDE SECTION START -->
+
+
+<div id="carouselExampleControls" class=" carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active time=0.1">
+
+      <img class="src1" src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.
+        3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGlicmFyeXxlbnwwfHwwfHx8MA%3D%3D" class="d-block w-100" alt="MUST BE READ">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="H5"> EXPLOR THE BUNDLE BABA </h5>
+        <HR>
+
+        <button type="button" class="btn btn-primary">1st year </button>
+        <button type="button" class="btn btn-secondary">2nd year</button>
+        <button type="button" class="btn btn-success"> 3rd year </button>
+        <button type="button" class="btn btn-danger"> 4th year</button>
+        <hr>
+        <p1 class="NOTE">**Bundle Baba** is a comprehensive online platform designed to streamline your study
+          experience by offering a vast collection of educational materials. From detailed notes and summaries to
+          in-depth quantum study resources, Bundle Baba provides students with organized, high-quality content to
+          enhance their learning journey. With a user-friendly interface and an extensive library covering various
+          subjects,
+          Bundle Baba aims to be the ultimate resource for efficient and effective study preparation..</p1>
+      </div>
+    </div>
+
+ <!-- SLIDE2 START HERE -->
+
+    <div class="carousel-item">
+      <img class="src2" src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=2070&auto=
+        format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100"
+        alt="HELP TO GROW">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="SLIDE2">FAST LEARNING THING </h5>
+
+        <HR>
+        <a class="btn btn-primary" href="https://youtu.be/Zff3rUY0iGg?si=Q7HZ9D123RmKBRgO" role="button">VIDEO1</a>
+        <a class="btn btn-primary" href="https://youtu.be/ycGNTVXvI9M?si=UkSGOhUTD9HDS-6T" role="button">VIDEO2</a>
+        <HR>
+        <p class="SLIDES2">To efficiently master a topic, start by focusing on the main ideas in your notes. Use
+          Quantum’s summaries and tools to reinforce these concepts, then engage in active recall with practice
+          questions.
+          Apply spaced repetition to review regularly and integrate the material with practical examples for deeper
+          understanding..</p>
+      </div>
+    </div>
+
+  <!-- SLIDE3 STAR HERE -->
+
+    <div class="carousel-item">
+      <img class="src3"
+        src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=
+        600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fE9OTElORSUyMEJPT0slMjBNQVRFUklBTCUyMFBJQ3xlbnwwfHwwfHx8MA%3D%3D"
+        class="d-block w-100" alt="FASTER GROW">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="SLIDE3">FASTER COVERING THE BOOK</h5>
+        <HR>
+        <a class="btn btn-primary" href="https://youtu.be/3qDnfdsjG70?si=fJ2ndcwNHFIqbs8N" role="button">VIDEO1</a>
+        <a class="btn btn-primary" href="https://youtu.be/QDUEbJCKIwE?si=Eq87Xppvnw7pG-36" role="button">VIDEO2</a>
+        <HR>
+        <p class="SLIDES3">Fast learning techniques enhance efficiency by allowing you to grasp and retain essential
+          information quickly. This approach minimizes study time while maximizing comprehension and application. It’s
+          crucial for meeting tight deadlines and staying competitive in fast-paced environments.
+          Ultimately, rapid learning empowers you to adapt and succeed in various academic and professional settings..
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+
+</div>
+
+  <!-- FEATURE LABEL -->
+  <!-- Title of a longer featured blog post -->
+
+
+  <HR>
+  <DIV class="CONTAINER1">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">BUNDLE</strong>
+            <h3 class="mb-0">FEATURE SPOTLIGHT</h3>
+            <div class="mb-1 text-muted">TODAY</div>
+            <p class="card-text mb-auto">We’re incorporating interactive quizzes for real-time feedback, multimedia
+              content like videos and infographics for diverse learning styles,
+              and personalized progress tracking to monitor and enhance individual performance.</p>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0360131518300459" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+            <IMG class="bd-placeholder-img" width="200" height="250"
+              src="https://www.shutterstock.com/image-vector/student-learning-process-back-view-600nw-688093252.jpg"
+              alt="1ST YEAR">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">TECH</strong>
+            <h3 class="mb-0">FEATURE HIGHLIGHT</h3>
+            <div class="mb-1 text-muted">TODAY</div>
+            <p class="mb-auto">Technology enhances learning by offering interactive tools like quizzes
+              and multimedia content that cater to different learning styles.that we can it always inhance you
+              experience get eaisly understanding the topic. </p>
+            <a href="https://timesofindia.indiatimes.com/readersblog/amitosh/the-role-of-technology-in-the-future-and-its-impact-on-society-52565/" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+
+
+            <IMG class="bd-placeholder-img" width="200" height="250"
+              src="https://blogassets.leverageedu.com/blog/wp-content/uploads/2019/12/21185119/Computer-Science-Subjects.png"
+              alt="TECH BENIFIT">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </DIV>
+  <hr>
+
+  <!-- SECTION FOOTER BOTTOM  START HERE-->
+
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <title> SECTION FOOTER BOTTOM </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <DIV class="CONTAINER">
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>ABOUT BABA JI</h6>
+            <p class="text-justify">Welcome to Baba Ji's Quantum Notes – Your ultimate resource for previous year
+              question banks! We provide meticulously curated educational resources to empower students and educators
+              alike. Our extensive collection covers diverse subjects, offering insights into past exam patterns and key
+              concepts to enhance your exam preparation. Whether you're aiming to excel in your exams or
+              understand academic trends, our resources are tailored to meet your needs.</p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links ">
+
+              <li><a href="https://en.wikipedia.org/wiki/Exam">EXAM PREPARATION</a></li>
+              <li><a href="https://aktu.ac.in/academic-calender.html">ACADEMIC CELENDER</a></li>
+              <li><a href="https://www.free-ebooks.net/engineering-textbooks#gs.e54b0l">SUBJECT TYPE</a></li>
+              <li><a href="https://youtu.be/nnsrwPu-MWo?si=f8s1QLTqtLer2wPX">LEARNING STYLES</a></li>
+              <li><a href="https://youtu.be/ifFZ1AeDyGw?si=kH2O0huAnaa1_FcM">FASTREACHED LEVEL</a></li>
+              <li><a href="#">STUDENT COMMUNITY</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+
+              <li><a href="https://aktu.ac.in/">AKTU NEWS</a></li>
+              <li><a href="https://www.kopykitab.com/engineering-ebooks-free-download"> BOOK BANK </a></li>
+              <li><a href="https://www.abesit.in/library/question-paper-bank/">PREVIOUS YEAR</a></li>
+              <li><a href="https://www.aktuonline.com/">NOTES COPY</a></li>
+              <li><a href="https://aktu.ac.in/nptel_online_certificate.html">NPTEL CR.</a></li>
+              <li><a href="LOGIN PAGE.HTML">CONT.US</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="small">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-12">
+            <p class="copyright-text">Copyright © 2024 All Rights Reserved by:
+              <a href="about.html"><span class="logo">BUNDLE BABA.</span></a>
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/profile.php?id=100069350902916"><i
+                    class="fab fa-facebook-f"></i></a></li>
+              <li><a class="twitter" href="https://x.com/neeraj_officia1?t=deBMOxFZ7p_29tXbvsQILQ&s=09"><i
+                    class="fab fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="https://www.instagram.com/fouji_.paremee/?hl=en"><i
+                    class="fab fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/in/neeraj-kumar-5ab2972a2/"><i
+                    class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+  </body>
+  </html>
+</DIV>
+
+
+  <!-- END OF FOOTER SECTION -->
+
+
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
