@@ -1,3 +1,5 @@
+NOTE : UPDATED PROGRESS UNDER THE BOUNDLE.BABA FILE.
+
 # 📚 engg-boundle — Your One-Stop Notes Hub for Engineering Students
 
 🚧 **Project Status:** Under Development
